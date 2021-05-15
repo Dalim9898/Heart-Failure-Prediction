@@ -1,0 +1,127 @@
+<!-- This is GUI for Heart Failure Prediction Application Using Machine Learning Classifer -->
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+
+  <style>
+    /* CSS code for button */
+    body {
+      background-image: url({static,'project.png'});
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    /* CSS code for button */
+    .button_css {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    }
+    
+    .button_css:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    }
+  </style>
+
+</head>
+
+<body>
+
+ 
+ 
+ <div class="login">
+	
+    <!-- Get input for predict the  heart failure -->
+    <center>
+         <br>
+            <br>
+               <br>
+                  <br>
+    <form action="{{ url_for('predict')}}"method="post">
+       
+          <br>
+            <br>
+              <br>
+                <br>
+                  <br>
+                    <br>
+                      <br>
+                        <br>
+                          <br>
+                           <br>
+                            <br>
+                             <br>
+                              <br>
+                               <br>
+                                <br>
+                                 <br>
+                                  <br>
+                                   <br>
+                                    <br>
+                                     <br>
+                                      <br>
+                                        <br>
+                                        
+                                    
+
+        <h1>Enter the value of heart features >>></h1>
+        
+    	<input type="text" name="age" placeholder="age" required="required" />
+        <input type="text" name="anaemia " placeholder="anaemia" required="required" />
+		<input type="text" name="creatinine_phosphokinase " placeholder="creatinine_phosphokinase " required="required" />
+        <input type="text" name="diabetes" placeholder="diabetes" required="required" />
+            
+		
+        
+
+		<br>
+    	<input type="text" name="ejection_fraction" placeholder="ejection_fraction" required="required" />
+        <input type="text" name="high_blood_pressure" placeholder="high_blood_pressure" required="required" />
+		<input type="text" name="platelets" placeholder="platelets" required="required" />
+        <input type="text" name="serum_creatinine" placeholder="serum_creatinine" required="required" />
+            
+    	
+        
+		
+		<br>
+    	<input type="text" name="serum_sodium" placeholder="serum_sodium" required="required" />
+        <input type="text" name="sex" placeholder="sex" required="required" />
+		<input type="text" name="smoking" placeholder="smoking" required="required" />
+        <input type="text" name="time" placeholder="time" required="required" />
+            
+    	
+
+        
+
+		<br>
+        <!-- Show button -->
+        <div class="button_cont" align="center"><a class="button_css" href="https://github.com/Dalim9898/Heart-Failure-Prediction.git" target="_blank" rel="nofollow noopener">
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Heart failure</strong></button></a>
+        </div>
+        
+    </form>
+    </center>
+   
+   <!-- Show predicted output using ML model --> 
+   <div>
+       <center>
+   <h1>{{ prediction_text }}</h1>
+       </center>
+   </div>
+
+ </div>
+
+</body>
+</html>
